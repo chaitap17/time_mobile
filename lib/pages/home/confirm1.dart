@@ -1,21 +1,17 @@
-import 'package:time_mobile/pages/home/Home.dart';
-import 'package:time_mobile/pages/home/inarea.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-import 'package:time_mobile/pages/home/showintime.dart';
-import 'package:time_mobile/pages/home/showouttime.dart';
+import 'package:time_mobile/pages/home/outarea.dart';
 
-class confirm extends StatefulWidget {
-  const confirm({Key key}) : super(key: key);
+class confirm1 extends StatefulWidget {
+  const confirm1({Key key}) : super(key: key);
 
   @override
-  _confirmState createState() => _confirmState();
+  _confirm1State createState() => _confirm1State();
 }
 
 DateTime myDateTime = DateTime.now();
 
-class _confirmState extends State<confirm> {
+class _confirm1State extends State<confirm1> {
   @override
   Widget build(BuildContext context) {
     var now = DateTime.now();
@@ -55,7 +51,7 @@ class _confirmState extends State<confirm> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => inarea()));
+                                  builder: (context) => outarea()));
                         },
                         icon: Icon(Icons.keyboard_backspace)))
               ],
@@ -97,10 +93,10 @@ class _confirmState extends State<confirm> {
                           iconSize: 150,
                           color: Colors.green,
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => showintime()));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => showintime()));
                           },
                           icon: Icon(Icons.login_outlined)),
                       Text('เข้างาน', style: TextStyle(fontSize: 24)),
@@ -117,10 +113,10 @@ class _confirmState extends State<confirm> {
                           iconSize: 150,
                           color: Colors.red,
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => showouttime()));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => showouttime()));
                           },
                           icon: Icon(Icons.logout_outlined)),
                       Text('เลิกงาน', style: TextStyle(fontSize: 24)),

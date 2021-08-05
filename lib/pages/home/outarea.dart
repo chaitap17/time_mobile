@@ -1,18 +1,18 @@
-import 'package:time_mobile/pages/home/Home.dart';
-import 'package:time_mobile/pages/home/confirm.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:time_mobile/pages/home/Home.dart';
+import 'package:time_mobile/pages/home/confirm1.dart';
 
-class inarea extends StatefulWidget {
-  const inarea({Key key}) : super(key: key);
+class outarea extends StatefulWidget {
+  const outarea({Key key}) : super(key: key);
 
   @override
-  _inareaState createState() => _inareaState();
+  _outareaState createState() => _outareaState();
 }
 
 DateTime myDateTime = DateTime.now();
 
-class _inareaState extends State<inarea> {
+class _outareaState extends State<outarea> {
   @override
   Widget build(BuildContext context) {
     var now = DateTime.now();
@@ -88,7 +88,7 @@ class _inareaState extends State<inarea> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => confirm()));
+                                  builder: (context) => confirm1()));
                         },
                         icon: Icon(Icons.fingerprint)),
                   ),

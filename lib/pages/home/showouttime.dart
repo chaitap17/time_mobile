@@ -1,21 +1,17 @@
-import 'package:time_mobile/pages/home/Home.dart';
-import 'package:time_mobile/pages/home/inarea.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-import 'package:time_mobile/pages/home/showintime.dart';
-import 'package:time_mobile/pages/home/showouttime.dart';
+import 'package:time_mobile/pages/home/Home.dart';
 
-class confirm extends StatefulWidget {
-  const confirm({Key key}) : super(key: key);
+class showouttime extends StatefulWidget {
+  const showouttime({Key key}) : super(key: key);
 
   @override
-  _confirmState createState() => _confirmState();
+  _showouttimeState createState() => _showouttimeState();
 }
 
 DateTime myDateTime = DateTime.now();
 
-class _confirmState extends State<confirm> {
+class _showouttimeState extends State<showouttime> {
   @override
   Widget build(BuildContext context) {
     var now = DateTime.now();
@@ -55,9 +51,9 @@ class _confirmState extends State<confirm> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => inarea()));
+                                  builder: (context) => MyHomePage()));
                         },
-                        icon: Icon(Icons.keyboard_backspace)))
+                        icon: Icon(Icons.home)))
               ],
             ),
           ),
@@ -85,51 +81,7 @@ class _confirmState extends State<confirm> {
               ),
             ],
           ),
-          Row(
-            children: [
-              Padding(padding: const EdgeInsets.fromLTRB(20, 50, 20, 0)),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Padding(padding: const EdgeInsets.all(20)),
-                      IconButton(
-                          iconSize: 150,
-                          color: Colors.green,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => showintime()));
-                          },
-                          icon: Icon(Icons.login_outlined)),
-                      Text('เข้างาน', style: TextStyle(fontSize: 24)),
-                    ],
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Padding(padding: const EdgeInsets.all(20)),
-                      IconButton(
-                          iconSize: 150,
-                          color: Colors.red,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => showouttime()));
-                          },
-                          icon: Icon(Icons.logout_outlined)),
-                      Text('เลิกงาน', style: TextStyle(fontSize: 24)),
-                    ],
-                  )
-                ],
-              )
-            ],
-          )
+          Row()
         ],
       ),
     );

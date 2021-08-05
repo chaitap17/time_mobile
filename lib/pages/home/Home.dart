@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:time_mobile/constants/sizes.dart';
-import 'package:time_mobile/pages/home/Intimes.dart';
+import 'package:time_mobile/pages/home/outarea.dart';
+import 'package:time_mobile/pages/home/passcode.dart';
 import 'package:time_mobile/pages/home/inarea.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +79,12 @@ class _MyHomeState extends State<MyHomePage> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(30, 70, 40, 0),
                   child: IconButton(
-                      iconSize: 95, onPressed: () {}, icon: Icon(Icons.hiking)),
+                      iconSize: 95,
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => outarea()));
+                      },
+                      icon: Icon(Icons.hiking)),
                 ),
                 Text('ลงปฏิบัติงานนอกสถานที่')
               ],
